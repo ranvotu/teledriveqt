@@ -45,7 +45,7 @@ function App(): React.ReactElement {
   useEffect(() => document.querySelector('.App')?.scrollIntoView(), [pathname])
 
   useEffect(() => {
-    if (me?.user.settings?.theme === 'light') {
+    if (me?.user?.settings?.theme === 'light') {
       switcher({ theme: 'light' })
     } else {
       switcher({ theme: 'dark' })
@@ -109,7 +109,7 @@ function App(): React.ReactElement {
       logoSrc='/logo192.png'>
       <Layout className="App">
         <Helmet>
-          <meta name="theme-color" content={me?.user.settings?.theme === 'dark' ? '#1F1F1F' : '#0088CC'} />
+          <meta name="theme-color" content={me?.user?.settings?.theme === 'dark' ? '#1F1F1F' : '#0088CC'} />
         </Helmet>
         {data?.maintenance ? <div style={{ minHeight: '100vh', paddingTop: '20vh' }}>
           <Result
